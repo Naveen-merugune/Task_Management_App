@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: "Naveen@5121"
+      MYSQL_DATABASE: "directus"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  directus:
+    image: directus/directus:11.0.0
+    ports:
+      - 8055:8055
+    depends_on:
+      - mysql
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    environment:
+      SECRET: "610741cd5391d12753d34aec2ae6f1e3ef50ca338b90e0c9015c4e5206906e1b"
+      ADMIN_EMAIL: "admin@example.com"
+      ADMIN_PASSWORD: "d1r3ctu5"
+      DB_CLIENT: "mysql"
+      DB_HOST: "mysql"
+      DB_PORT: "3306"
+      DB_DATABASE: "directus"
+      DB_USER: "root"
+      DB_PASSWORD: "Naveen@5121"
+      WEBSOCKETS_ENABLED: "true"
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: "*"

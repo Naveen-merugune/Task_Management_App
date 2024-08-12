@@ -1,0 +1,26 @@
+{
+  "name": "myapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "@tailwindcss/typography": "^0.5.14",
+    "autoprefixer": "^10.4.20",
+    "svelte": "^4.2.18",
+    "tailwindcss": "^3.4.9",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "flowbite": "^2.5.1",
+    "flowbite-svelte": "^0.46.15",
+    "svelte-navigator": "^3.2.2",
+    "tailwind-merge": "^2.5.0"
+  }
+}
