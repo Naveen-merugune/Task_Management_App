@@ -20,7 +20,7 @@ This project is a **Task Management Application** that uses **Directus** for the
 **Backend Setup**
 
 **Clone the Repository**:  
-`git clone <repository-url>`  
+`git clone https://github.com/Naveen-merugune/Task_Management_App.git`  
 `cd Task_Management_App/task_manager_backend/Directus`
 
 1. **Run Docker Compose**:  
