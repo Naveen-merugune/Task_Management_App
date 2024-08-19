@@ -5,12 +5,10 @@
 
   let loggedIn = false;
 
-  // Function to handle login
   function handleLogin() {
     loggedIn = true;
   }
 
-  // Redirect to task management if already logged in
   onMount(() => {
     if (localStorage.getItem('loggedIn') === 'true') {
       loggedIn = true;
@@ -18,20 +16,10 @@
   });
 </script>
 
-<main>
+<main class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
   {#if !loggedIn}
     <Login on:login={handleLogin} />
   {:else}
     <Tasks />
   {/if}
 </main>
-
-<style>
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f3f4f6;
-  }
-</style>

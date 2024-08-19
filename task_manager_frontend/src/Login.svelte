@@ -12,9 +12,9 @@
       const response = await fetch('http://localhost:8055/auth/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
       });
 
       if (response.ok) {
@@ -32,7 +32,7 @@
   }
 </script>
 
-<div class="flex justify-center items-center min-h-screen bg-gray-100">
+<div class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
   <div class="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg">
     <h2 class="text-2xl font-bold text-blue-600 mb-6">Login</h2>
     <form on:submit={handleSubmit}>
